@@ -15,6 +15,7 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
                     <img src="${img.url}" width="270px">
                 </div>
                 <p>${img.title}</p>
+                <div class="point"></div>
             </div>
         `;
     console.log(markup);
