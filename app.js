@@ -14,8 +14,6 @@ function generetMarkup(imgs) {
     imgs.forEach(img => {
         const markup =
             `
-             
-
             <div class="post mx-3 col-sm-12 col-md-6 col-lg-4">
                 <div class="post-image">
                     <img src="${img.url}" width="270px">
@@ -35,9 +33,30 @@ function generetMarkup(imgs) {
         `;
         posts.insertAdjacentHTML('afterbegin', markup);
     });
-
-    /* seleziono tutte le immagini dal dom */
-    const allPostElement = document.querySelectorAll('.post');
-        /* console.log(allPostElement); */
+    overlay()
 
 }
+
+function overlay(){
+     /* seleziono tutte le card dal dom */
+    const allPostElement = document.querySelectorAll('.post');
+    /* console.log(allPostElement); */ 
+
+    /* scorro tra le card selezionate e associo a ciascuna un event listener */
+    allPostElement.forEach(post => {
+        post.addEventListener('click', function() {
+            overlayOn(post);
+            overlayOff(post);
+        });
+    });
+}
+
+function overlayOn(post){
+    post.querySelector(".overlay").style.display = "block";
+}
+
+function overlayOff(post){
+    post.querySelector(".overlay").style.display = "none";
+}
+
+
