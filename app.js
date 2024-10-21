@@ -45,18 +45,18 @@ function overlay(){
     /* scorro tra le card selezionate e associo a ciascuna un event listener */
     allPostElement.forEach(post => {
         post.addEventListener('click', function() {
-            overlayOn(post);
-            overlayOff(post);
+            overlayOnOff(post);
         });
     });
 }
 
-function overlayOn(post){
-    post.querySelector(".overlay").style.display = "block";
-}
-
-function overlayOff(post){
-    post.querySelector(".overlay").style.display = "none";
+function overlayOnOff(post){
+    const element = post.querySelector(".overlay");
+    if(element.style.display === 'block'){
+        element.style.display = 'none';
+    }else{
+        element.style.display = 'block';
+    }
 }
 
 
