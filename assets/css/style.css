@@ -21,7 +21,7 @@ body {
                 width: 295px;
                 height: 380px;
                 background-color: white;
-                margin-top: 1rem;
+                margin-top: 2rem;
                 position: relative;
 
                 p {
@@ -44,8 +44,8 @@ body {
 
                 &:hover{
                     transform: scale(1.1);
-                    transform: rotate(12deg);
-                }
+                    transform: rotate(5deg);
+                } 
                 
                 .point {
                     width: 23px;

@@ -53,8 +53,6 @@ function overlay(){
 
 function overlayOnOff(post){
     const element = post.querySelector(".overlay"); 
-    console.log(element);
+    /* console.log(element); */
     element.classList.toggle('show');       
 }
-
-
