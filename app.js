@@ -5,12 +5,12 @@ axios.get("https://jsonplaceholder.typicode.com/photos?_limit=6")
         let imgs = response.data;
         /* console.log(imgs); */
 
-        generetMarkup(imgs);
+        genereteMarkup(imgs);
 
     }).catch(err => console.error(err));
 
 
-function generetMarkup(imgs) {
+function genereteMarkup(imgs) {
     imgs.forEach(img => {
         const markup =
             `
@@ -44,6 +44,7 @@ function overlay(){
 
     /* scorro tra le card selezionate e associo a ciascuna un event listener */
     allPostElement.forEach(post => {
+        /* al click devo mostrare l'overlay */
         post.addEventListener('click', function() {
             overlayOnOff(post);
         });
@@ -51,12 +52,9 @@ function overlay(){
 }
 
 function overlayOnOff(post){
-    const element = post.querySelector(".overlay");
-    if(element.style.display === 'block'){
-        element.style.display = 'none';
-    }else{
-        element.style.display = 'block';
-    }
+    const element = post.querySelector(".overlay"); 
+    console.log(element);
+    element.classList.toggle('show');       
 }
 
 
