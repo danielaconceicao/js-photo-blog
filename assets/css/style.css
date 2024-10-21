@@ -12,33 +12,40 @@ body {
         background-image: url('../img/cork.png');
         background-size: cover;
         height: 100%;
-        .posts{
+
+        .posts {
             flex-wrap: wrap;
-            .post{
+            position: relative;
+
+            .post {
                 width: 295px;
                 height: 380px;
                 background-color: white;
                 margin-top: 1rem;
                 position: relative;
-                p{
+
+                p {
                     padding: .5rem;
                     font-family: "Sometype Mono", monospace;
                 }
-                .post-image{
+
+                .post-image {
                     width: 270px;
                     height: 270px;
                     margin: 0 auto;
                     margin-top: 1.5rem;
-                    p{
+
+                    p {
                         text-align: center;
                         vertical-align: bottom;
                     }
                 }
-                &:hover{
+
+                /*  &:hover{
                     transform: scale(1.1);
-                    transform: rotate(15deg);
-                }
-                .point{
+                    transform: rotate(12deg);
+                } */
+                .point {
                     width: 23px;
                     height: 22px;
                     background-color: rgb(231, 31, 31);
@@ -47,6 +54,28 @@ body {
                     top: 3px;
                     left: 50%;
                 }
+
+
+            }
+
+            .overlay {
+                position: fixed;
+                display: none;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .aparecer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: black;
+                font-size: 1rem;
+                transform: translate(-50%, -50%);
             }
         }
     }
